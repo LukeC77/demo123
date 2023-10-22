@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json2.html</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="display"></div>
+    <a href="#">BACK</a>
+    <script>
+      $.get(
+        "https://www.yifanc.sgedu.site/portfolio/problemset2-3/songs.json",
+        function (data) {
+          var s_set = JSON.stringify(data);
+          $("#display").html(s_set);
+        }
+      );
+    </script>
+  </body>
+</html>
